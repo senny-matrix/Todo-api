@@ -6,20 +6,7 @@ var bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 var todos = [
-//{
-//    id: 1,
-//    description: 'Meet Senny for Lunch',
-//    completed: false
-//    
-//},{
-//    id: 2,
-//    description: 'Go to market',
-//    completed: false
-//},{
-//    id: 3,
-//    description: 'Buying Juice for Jesca!',
-//    completed:true
-//}
+
 ];
 
 app.get('/', function(req, res){
