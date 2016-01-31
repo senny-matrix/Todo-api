@@ -59,15 +59,7 @@ app.get('/todos/:id', function (req, res) {
     }, function (e) {
         res.status(500).send();
     });
-    //    var matchedTodo = _.findWhere(todos, {
-    //        id: todoID
-    //    });
-    //
-    //    if (matchedTodo) {
-    //        res.json(matchedTodo);
-    //    } else {
-    //        res.status(404).send();
-    //    }
+
 });
 
 // POST Request /todos/
