@@ -81,13 +81,13 @@ app.post('/users', function (req, res) {
     var body = _.pick(req.body, 'email', 'password');
 
     db.user.create(body).then(function (user) {
-        res.json(user.toJSON());
+        res.json(user.toPublicJSON());
     }, function (e) {
         res.status(400).json(e);
     });
 });
 
-// DELETE /todos/:id 
+// DELETE /todos/:id
 app.delete('/todos/:id', function (req, res) {
     var todoID = parseInt(req.params.id, 10);
 
@@ -109,7 +109,7 @@ app.delete('/todos/:id', function (req, res) {
 
 });
 
-// PUT /todos/:id 
+// PUT /todos/:id
 app.put('/todos/:id', function (req, res) {
     var todoID = parseInt(req.params.id, 10);
     var body = _.pick(req.body, 'description', 'completed');
